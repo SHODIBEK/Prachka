@@ -1,0 +1,22 @@
+section.services
+  .container
+    .services__wrapper
+      h2.services__title.text-center
+        | Стоимость услуг
+      p.services__desc.text-center
+        | Основные услуги
+      .services__content
+        .services__total
+          +svg('bag').services__total-icon
+          span.services__total-txt
+            | Итого:
+          span.services__total-count.total
+        .services__carts
+          include ../components/cart-grid
+        .services__lists
+          include ../components/cart-list
+          .services__total
+            +svg('bag').services__total-icon
+            span.services__total-txt
+              | Итого:
+            span.services__total-count.total

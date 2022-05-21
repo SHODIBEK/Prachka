@@ -1,0 +1,14 @@
+section.section-faq
+  .container
+    h2.section-faq__title.text-center
+      | Частые вопросы
+    .section-faq__items.faq
+      each item in data.home.faqs
+        .section-faq__item.faq__item
+          .section-faq__icon.faq__icon
+            img(src=`${baseDir}images/icons/${item.icon}.png`, alt!=item.title)
+          .section-faq__block.faq__block.js-toggle--click
+            span.arrow.section-faq__arrow.faq__arrow
+            h5.section-faq__txt.faq__title!=item.title
+            .js-toggle--block.faq__toggle
+              p.section-faq__subtitle.faq__subtitle!=item.subtitle

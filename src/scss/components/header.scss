@@ -1,0 +1,36 @@
+.header {
+  padding: 26px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 0px 0px var(--border-radius) var(--border-radius);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-color);
+  z-index: 2;
+
+  @include desktop {
+    padding: 35px 0;
+  }
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__logo {
+    display: inline-block;
+    width: 166px;
+    height: 27px;
+
+    @include desktop {
+      width: 222px;
+      height: 36px;
+    }
+  }
+
+  &__social {
+    @include desktop {
+      margin-right: 61px;
+    }
+  }
+}

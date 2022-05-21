@@ -1,0 +1,57 @@
+.number {
+  display: flex;
+  align-items: center;
+  .value {
+    margin: 0 3px;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 18px;
+    min-width: 18px;
+    text-align: center;
+  }
+
+  .minus,
+  .plus {
+    position: relative;
+    width: 22.97px;
+    height: 22.97px;
+    border-radius: 50%;
+    @extend %flex-center;
+    cursor: pointer;
+
+    @media (max-width: 375px) {
+      width: 20px;
+      height: 20px;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 11px;
+      height: 1px;
+      margin: auto;
+    }
+  }
+
+  .minus {
+    border: 1px solid rgba(0, 136, 220, 0.1);
+
+    &::after {
+      background-color: var(--main-color);
+    }
+  }
+
+  .plus {
+    background: var(--linear-gradient);
+
+    &::before,
+    &::after {
+      background-color: var(--color-white);
+    }
+
+    &::before {
+      transform: rotate(90deg);
+    }
+  }
+}

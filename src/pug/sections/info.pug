@@ -1,0 +1,10 @@
+section.info
+  .container
+    h2.info__title.text-center
+      | Просто Быстро Чисто
+    .info__row
+      each info in data.home.info
+        .info__col
+          img(src=`${baseDir}images/${info.icon}.svg`, alt!=info.title).info__img
+          p.info__desc!=info.title
+          span.info__subtitle!=info.subtitle

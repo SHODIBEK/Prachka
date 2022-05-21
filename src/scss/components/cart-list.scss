@@ -1,0 +1,113 @@
+.cartList {
+  
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: calc(-1 * var(--bs-gutter-x));
+    margin-left: calc(-1 * var(--bs-gutter-x));
+
+    & > * {
+      flex-shrink: 0;
+      width: 100%;
+      max-width: 100%;
+      padding-right: calc(var(--bs-gutter-x) * 0.5);
+      padding-left: calc(var(--bs-gutter-x) * 0.5);
+    }
+    
+  }
+
+  &__col {
+    padding: 0 8.5px;
+    margin-bottom: 20px;
+
+    @include desktop {
+      width: 50%;
+      margin-bottom: 0;
+    }
+  }
+  &__item {
+    overflow: hidden;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    @include desktop {
+      border: 1px solid rgba(0, 136, 220, 0.1);
+    }
+  }
+  &__header {
+    padding: 9px 35px 9px 15px;
+    position: relative;
+    @extend %d-flex;
+    align-items: center;
+    border-radius: var(--border-radius);
+    background-color: var(--bg-color);
+
+    @include desktop {
+      padding: 6px 30px;
+    }
+  }
+
+  &__icon {
+    margin-right: 18px;
+  }
+
+  &__arrow {
+    top: 17px;
+    right: 15px;
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+
+    @include desktop {
+      font-size: 18px;
+    }
+  }
+
+  &__body {
+    padding: 14px 15px;
+
+    @include desktop {
+      padding: 15px 16px 15px 30px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: var(--color-text);
+
+    &:not(:last-child) {
+      margin-bottom: 17px;
+
+      @include desktop {
+        margin-bottom: 14px;
+      }
+    }
+
+    @include desktop {
+      font-size: 16px;
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+  }
+
+  &__number {
+    margin-left: 7px;
+  }
+}

@@ -1,0 +1,31 @@
+section.hero
+  .container-md
+    .hero__wrapper
+      .hero__block
+        .hero__bg
+        .container
+          h1.hero__title
+            | Професиональная <span class="primary-text">химчистка и стирка</span>
+          p.hero__subtitle
+            |  Прачечная с удобной доставкой
+          img(src="./images/car.png", alt="car" width="610" height="281").hero__image
+      form(action="/" method="POST").hero__form
+        .container
+          h5.hero__form-title.text-center
+            | Чтобы вызвать курьера заполните форму:
+          .hero__form-block
+            .form-group
+              input(type="text", placeholder="Ваше имя").form-group__input
+            .form-group
+              input(type="text", placeholder="+7(___)___-__-__").phone-mask.form-group__input
+          .hero__form-block
+            .form-group
+              input(type="text" id="date" readonly).date-time.form-group__input
+              label(for="date").date-time__label
+                +svg('calendar')
+                span.day
+            .form-group
+              input(type="text", placeholder="Комментарии к заказу").form-group__input
+          .form-btn
+            button(type="submit").button.button-primary.hero__form-button
+              | Вызвать курьера

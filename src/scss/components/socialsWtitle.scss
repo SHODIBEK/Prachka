@@ -1,0 +1,38 @@
+.socialsWtitle {
+  &__item {
+    margin-bottom: 7px;
+    @include mobile {
+      display: flex;
+      justify-content: center;
+    }
+    @include desktop {
+      &:not(:last-child) {
+        margin-right: 59px;
+      }
+    }
+  }
+
+  &__link {
+    padding: 0 10px;
+    @extend %flex-center;
+    width: 257px;
+    height: 39px;
+    border-radius: 48px;
+    background: var(--social-color);
+  }
+
+  &__icon {
+    margin-right: 13px;
+    width: 25px;
+    height: 25px;
+    flex: 0 0 25px;
+    fill: #fff;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--color-white);
+  }
+}

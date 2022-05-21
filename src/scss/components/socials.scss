@@ -1,0 +1,28 @@
+.socials {
+  @extend %d-flex;
+  &__item {
+    margin-left: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include desktop {
+      margin-left: 16px;
+    }
+  }
+
+  &__link {
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+
+    @include desktop {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &__icon {
+
+  }
+}

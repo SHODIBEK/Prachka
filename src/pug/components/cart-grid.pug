@@ -1,0 +1,20 @@
+.carts
+  .carts__row
+    each cart, i in data.home.carts
+      .carts__col
+        .carts__item
+          .carts__header
+            img(src=`${baseDir}images/content/item-${i+1}.png`, alt!=cart.title).carts__image
+            .carts__info
+              img(src="./images/icons/voltage.png", alt="voltage")
+          .carts__block
+            h5.carts__title!=cart.title
+            if(cart.desc)
+              span.carts__desc!=cart.desc
+            .carts__prices
+              .carts__price!=cart.price
+                | &nbsp;&#8381;
+              .number
+                span(data-price!=cart.price).minus
+                span.value 0
+                span(data-price!=cart.price).plus

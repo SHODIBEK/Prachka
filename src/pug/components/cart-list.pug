@@ -1,0 +1,39 @@
+.cartList
+  .cartList__row
+      .cartList__col
+        each list in data.home.lists[0]
+          .cartList__item
+            .cartList__header.js-toggle--click
+              img(src=`${baseDir}images/icons/${list.icon}.svg`, alt="").cartList__icon
+              .cartList__title!=list.title
+              span.cartList__arrow.arrow
+            .cartList__body.js-toggle--block
+              ul.cartList__lists
+                each body in list.items
+                  li.cartList__list
+                    .cartList__txt!=body.title
+                    .cartList__price!=body.price
+                      | &nbsp;&#8381;
+                      .number.cartList__number
+                        span(data-price!=body.price).minus
+                        span.value 0
+                        span(data-price!=body.price).plus
+      
+      .cartList__col
+        each list in data.home.lists[1]
+          .cartList__item
+            .cartList__header.js-toggle--click
+              img(src=`${baseDir}images/icons/${list.icon}.svg`, alt="").cartList__icon
+              .cartList__title!=list.title
+              span.cartList__arrow.arrow
+            .cartList__body.js-toggle--block
+              ul.cartList__lists
+                each body in list.items
+                  li.cartList__list
+                    .cartList__txt!=body.title
+                    .cartList__price!=body.price
+                      | &nbsp;&#8381;
+                      .number.cartList__number
+                        span(data-price!=body.price).minus
+                        span.value 0
+                        span(data-price!=body.price).plus

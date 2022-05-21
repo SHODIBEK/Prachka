@@ -1,0 +1,389 @@
+.hero {
+  padding-bottom: 50px;
+  @include mobile {
+    background-color: var(--bg-color);
+  }
+  @include desktop {
+    padding-top: 76px;
+    padding-bottom: 82px;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 92%;
+    background-color: var(--main-color);
+    box-shadow: var(--shadow-color);
+    border-radius: 0px 0px var(--border-radius) var(--border-radius);
+    z-index: 0;
+
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__wrapper {
+    @extend %d-flex;
+    flex-direction: column;
+
+    @include desktop {
+      flex-direction: row;
+    }
+  }
+
+  &__block {
+    padding-top: 40px;
+    margin-top: -15px;
+    position: relative;
+    width: 100%;
+    @include desktop {
+      max-width: 60%;
+      padding: 0 47px;
+      margin: 0;
+    }
+  }
+
+  &__image {
+    max-width: initial;
+    width: 450px;
+    height: auto;
+
+    @include desktop {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 110%;
+    color: var(--color-white);
+    word-break: break-word;
+
+    @include desktop {
+      margin-bottom: 45px;
+      margin-left: 73px;
+      font-size: 48px;
+      line-height: 120%;
+      color: var(--color-black);
+    }
+    
+    .primary-text {
+      margin-left: -19px;
+      margin-top: 3px;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 0;
+    margin-bottom: 9px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    color: var(--color-white);
+    
+    @include desktop {
+      margin-left: 78px;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 100%;
+      color: var(--color-black);
+    }
+  }
+
+  &__form {
+    padding-top: 50px;
+    margin: 0 auto;
+    @include desktop {
+      padding: 9px 20px;
+      margin: 0;
+      width: 331px;
+    }
+
+    .container {
+      @include desktop {
+        padding: 0;
+      }
+    }
+
+    &-title {
+      margin-top: 0;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 100%;
+    }
+
+    &-block {
+      margin-bottom: 20px;
+    }
+
+    &-button {
+      width: 100%;
+    }
+
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    .form-btn {
+      margin-top: 30px;
+    }
+  }
+}
+
+.info {
+  padding: 20px 0;
+  @include desktop {
+    padding: 81px 0;
+    background-color: var(--bg-color);
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 2.2rem;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+
+    @include desktop {
+      font-size: 32px;
+    }
+  }
+
+  &__row {
+    @extend %d-flex;
+    padding: 0 32px;
+  }
+
+  &__col {
+    margin-bottom: 20px;
+    text-align: center;
+    @include desktop {
+      margin-bottom: 0;
+      padding: 0 25px;
+      max-width: 33.3%;
+    }
+  }
+
+  &__img {
+    margin-bottom: 20px;
+  }
+
+  &__desc {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+
+    @include desktop {
+      font-size: 24px;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+  }
+}
+
+.services {
+  padding: 20px 0;
+  @include desktop {
+    padding: 80px 0;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 14px;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 90%;
+  }
+
+  &__desc {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+  }
+
+  &__content {
+    margin-top: 30px;
+  }
+
+  &__total {
+    padding: 10px 22px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: var(--color-white);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    background-color: var(--main-color);
+    border-radius: var(--border-radius);
+
+    @media (max-width: 375px) {
+      font-size: 14px;
+    }
+
+    @include desktop {
+      width: 418px;
+      font-size: 20px;
+    }
+
+    &-icon {
+      margin-right: 22px;
+      width: 32px;
+      height: 29px;
+      fill: none;
+      display: inline-block;
+    }
+    
+    &-txt {
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+
+  &__carts {
+    margin-top: 30px;
+  }
+
+  &__lists {
+    margin-top: 20px;
+
+    @include desktop {
+      margin-top: 40px;
+    }
+
+    .services__total {
+      margin-top: 20px;
+
+      @include desktop {
+        display: none;
+      }
+    }
+  }
+}
+
+.section-form {
+  padding-top: 20px;
+  padding-bottom: 35px;
+  @include desktop {
+    padding: 80px 0;
+    background-color: var(--bg-color);
+  }
+  &__title {
+    margin-bottom: 40px;
+    font-weight: 500;
+    font-size: 24px;
+  }
+
+  &__form {
+    @include desktop {
+      width: 622px;
+      margin: 0 auto;
+    }
+  }
+
+  &__block {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    @include desktop {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px 40px;
+    }
+  }
+
+  &__button {
+    margin-top: 40px;
+    @include desktop {
+      margin-top: 22px;
+    }
+  }
+}
+
+.section-map {
+  padding-top: 35px;
+  padding-bottom: 20px;
+
+  @include desktop {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-weight: 600;
+    font-size: 32px;
+  }
+
+  &__frame {
+    width: 100%;
+    height: 428px;
+
+    @include desktop {
+      height: 540px;
+    }
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.section-faq {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  @include desktop {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  &__title {
+    margin-top: 0;
+    margin-bottom: 32px;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 125%;
+
+    @include desktop {
+      margin-bottom: 45px;
+    }
+  }
+}
+
+.section-socials {
+  padding-top: 20px;
+  padding-bottom: 50px;
+
+  @include desktop {
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 23px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  &__items {
+    @include desktop {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+section.section-socials
+  .container
+    h2.section-socials__title.text-center
+      | Мы отвечаем в мессенджерах
+    .section-socials__items.socialsWtitle
+      each item in data.home.socials
+        .section-socials__item.socialsWtitle__item
+          a(
+            href="#", 
+            target="_blank", 
+            rel="nofollow" 
+            title!=item.title, 
+            style={
+              '--social-color': item.color
+            }
+          ).section-socials__link.socialsWtitle__link
+            +svg(item.icon).section-socials__icon.socialsWtitle__icon
+            span.section-socials__txt.socialsWtitle__title!=item.title
