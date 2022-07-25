@@ -22,7 +22,7 @@ To deploy this project run
 
 ## 🖼️ **SCREENSHOTS**
 
-![App Screenshot](https://i.ibb.co/FB7ZFqm/prachka-com.jpg)
+![App Screenshot]([https://i.ibb.co/FB7ZFqm/prachka-com.jpg](https://i.ibb.co/FB7ZFqm/prachka-com.jpg))
 
 
 ## 🔗**LINK TO PAGE**
